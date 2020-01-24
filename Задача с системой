@@ -1,0 +1,29 @@
+// Example program
+#include <iostream>
+#include <cmath>
+#include <clocale>
+using namespace std;
+
+int main()
+{
+    setlocale(LC_ALL,"");
+    double x,y,a,b;
+    cout<<"Введите x ";
+    cin>>x;
+    if(x>=7.3)
+    {
+        cout<<"Будем решать x-ln(a*x) , но для начала введите а"<<endl;
+        cin>>a;
+        y=x-log(a*x);
+        cout<<"x-ln(a*x) = "<<y<<endl;
+    }
+    else if(x<7.3)
+    {
+        cout<<"Решаем x^3-exp^(bx), введите b ";
+        cin>>b;
+        y=pow(x,3)-exp(b*x);
+        cout<<"x^3-exp^(bx) = "<<y<<endl;
+        
+    }
+    return 0;
+}
